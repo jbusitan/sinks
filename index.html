@@ -3,56 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinks R Us - Old School Website</title>
+    <title>Sinks R Us - Modern Website</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        :root {
+            --primary-color: #26282b;
+            --secondary-color: #282b2e;
+            --accent-color: #13961e;
+            --background-color: #f8f9fa;
+            --text-color: #212529;
+            --card-bg: white;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 200px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--secondary-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--card-shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px var(--card-shadow);
+        }
+
+        .card img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <table width="100%" cellspacing="0" cellpadding="0" border="0">
-        <tr>
-            <td colspan="2" style="background-color: #cccccc; text-align: center; padding: 10px;">
-                <h1>Sinks R Us</h1>
-                <p>Your one-stop shop for all types of sinks</p>
-            </td>
-        </tr>
-        <tr>
-            <td width="20%" style="background-color: #333333; color: white; padding: 10px; vertical-align: top;">
-                <ul style="list-style-type: none; padding: 0;">
-                    <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">About Us</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Types of Sinks</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Features</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Contact Us</a></li>
-                </ul>
-            </td>
-            <td style="padding: 10px;">
-                <table width="100%" cellspacing="10" cellpadding="10" border="1">
-                    <tr>
-                        <td style="padding: 10px;">
-                            <img src="images/sink1.jpg" alt="Sink Image" width="100%" height="auto">
-                            <h2>About Our Sinks</h2>
-                            <p>At Sinks R Us, we offer a wide variety of sinks to suit every need. From classic designs to modern styles, our sinks are made from high-quality materials and built to last.</p>
-                        </td>
-                        <td style="padding: 10px;">
-                            <img src="images/sink2.jpg" alt="Sink Image" width="100%" height="auto">
-                            <h2>Types of Sinks</h2>
-                            <p>Explore our extensive range of sinks, including undermount, farmhouse, and vessel sinks. Each type comes with its own unique features and benefits to match your kitchen or bathroom design.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px;" colspan="2">
-                            <img src="images/sink3.jpeg" alt="Sink Features" width="100%" height="auto">
-                            <h2>Features and Benefits</h2>
-                            <p>Our sinks come with a range of features, including easy-to-clean surfaces, scratch resistance, and various styles to complement your decor. Learn more about what makes our sinks stand out.</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="background-color: #cccccc; text-align: center; padding: 10px;">
-                <p>&copy; 2024 Sinks R Us</p>
-            </td>
-        </tr>
-    </table>
+    <header>
+        <h1>Sinks R Us</h1>
+        <p>Your one-stop shop for all types of sinks</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Types of Sinks</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#">Undermount Sinks</a></li>
+                <li><a href="#">Farmhouse Sinks</a></li>
+                <li><a href="#">Vessel Sinks</a></li>
+            </ul>
+        </aside>
+        
+        <main class="content">
+            <div class="card">
+                <img src="images/sink1.jpg" alt="Sink Image">
+                <h2>About Our Sinks</h2>
+                <p>At Sinks R Us, we offer a wide variety of sinks to suit every need. From classic designs to modern styles, our sinks are made from high-quality materials and built to last.</p>
+            </div>
+            <div class="card">
+                <img src="images/sink2.jpg" alt="Sink Image">
+                <h2>Types of Sinks</h2>
+                <p>Explore our extensive range of sinks, including undermount, farmhouse, and vessel sinks. Each type comes with its own unique features and benefits to match your kitchen or bathroom design.</p>
+            </div>
+            <div class="card">
+                <img src="images/sink3.jpeg" alt="Sink Features">
+                <h2>Features and Benefits</h2>
+                <p>Our sinks come with a range of features, including easy-to-clean surfaces, scratch resistance, and various styles to complement your decor. Learn more about what makes our sinks stand out.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sinks R Us</p>
+    </footer>
 </body>
 </html>
